@@ -198,6 +198,10 @@ You are required to complete the implementation of the following methods in [Sto
 
 The TODO-comments in `Storage.java` class provides more detailed information about what the individual methods are supposed to do.
 
+**Hint:** to obtain an empty set of subscribers when creating a new topic you can use the method `ConcurrentHashMap.newKeySet()`.
+
+Note that both users and topics are identified using `String` which is not strogly typse safe, and hence you need to be careful not to use a user as topic (or vice versa) when passing arguments to constructors and methods.
+
 The package `no.hvl.dat110.broker.storage.tests` in the `dat110-prosject2-testing` project contains some basic unit tests that can be used to test the implementation of the storage methods.
 
 #### Task B.2 Broker Dispatcher for Message Processing
